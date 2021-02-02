@@ -94,9 +94,8 @@ namespace MoonscraperChartEditor.Song.IO
             foreach (Song.AudioInstrument audio in EnumX<Song.AudioInstrument>.Values)
             {
                 string filename = string.Empty;
-
-                string[] locationOverrides = null;
-                if (c_audioStreamLocationOverrideDict.TryGetValue(audio, out locationOverrides))
+                
+                if (c_audioStreamLocationOverrideDict.TryGetValue(audio, out string[] locationOverrides))
                 {
                     foreach (string overrideFilename in locationOverrides)
                     {
